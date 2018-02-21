@@ -1,0 +1,28 @@
+{
+  "name": "captionstream",
+  "version": "1.0.0",
+  "description": "A system for live streaming dictated text as captions for live performances.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonHolt/CaptionStream.git"
+  },
+  "keywords": [
+    "Caption",
+    "Stream",
+    "node",
+    "accessability"
+  ],
+  "author": "Jonathan Holt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonHolt/CaptionStream/issues"
+  },
+  "homepage": "https://github.com/JonHolt/CaptionStream#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

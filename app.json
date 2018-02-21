@@ -1,0 +1,8 @@
+{
+  "name": "CaptionStream",
+  "description": "A system for live streaming dictated text as captions for live performances.",
+  "repository": "https://github.com/JonHolt/CaptionStream",
+  "logo": "",
+  "keywords": ["node", "express", "captions", "accessability"],
+  "image": ""
+}
