@@ -5,3 +5,14 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#clear {
+    margin: 2em;
+    padding: 1em;
+}
