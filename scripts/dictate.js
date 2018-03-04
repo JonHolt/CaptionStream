@@ -16,7 +16,7 @@
         };
         xhr.send(JSON.stringify({
             newline,
-            chunk
+            chunk: ' ' + chunk
         }));
     }
 
