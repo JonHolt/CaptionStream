@@ -7,11 +7,17 @@
         <link rel="stylesheet" href="/content/style.css">
     </head>
     <body>
-        <div class="col">
-            <span>Dictate here:</span></br>
-            <textarea rows="5" cols="32" id="dictation"></textarea>
+        <div class="input-column">
+            <span>Paste script here:</span></br>
+            <textarea rows="50" cols="50" id="script"></textarea>
             <input type="button" id="clear" value="End Stream">
         </div>
+        <div class="output-column" id="scroller">
+            <p id="current-line"></p>
+        </div>
+
+        <script type="text/javascript" src="/scripts/polyfill.js"></script>
+        <script type="text/javascript" src="/scripts/stream.js"></script>
         <script type="text/javascript" src="/scripts/dictate.js"></script>
     </body>
 </html>

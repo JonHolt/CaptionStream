@@ -1,16 +1,26 @@
 body {
+    height: 100vh;
     font-size: 2em;
     color: #FFF;
     background-color: #000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.col {
+.input-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.output-column {
+    width: 50%;
+}
+
+#scroller {
+    height: 100%;
+    overflow-y: hidden;
 }
 
 #clear {

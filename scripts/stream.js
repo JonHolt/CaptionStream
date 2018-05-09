@@ -1,6 +1,7 @@
 (function() {
   // data 
   var currentLine = 0;
+  var scrollArea = document.getElementById('scroller');
   // Start where the server currently is, to avoid stale captions
   let firstLineXHR = new XMLHttpRequest();
   firstLineXHR.open('GET', '/api/currentLine');
@@ -40,7 +41,7 @@
   },1000);
 
   function pageScroll() {
-    window.scrollBy(0,1);
+    scrollArea.scrollTop += 1;
     scrolldelay = setTimeout(pageScroll, 10);
   }
   pageScroll();

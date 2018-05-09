@@ -1,6 +1,6 @@
 (function() {
     const LINE_LENGTH = 20;
-    const dictationArea = document.getElementById('dictation');
+    const dictationArea = document.getElementById('script');
     
     // util
     function sendContents(chunk, newline) {
@@ -20,20 +20,13 @@
         }));
     }
 
-    dictationArea.addEventListener('input', function(event) {
-        var contents = event.target.value;
-        if (contents.length > LINE_LENGTH) {
-        event.target.value = '';
-            // Send one line of text to server and remove sent text from text area.
-            sendContents(contents);
-        }
-    });
     dictationArea.addEventListener('keypress', function(event) {
         var key = (event.keyCode ? event.keyCode : event.which);
         if (key === 13) {
-            var contents = event.target.value;
-            sendContents(contents, true);
-            event.target.value = '';
+            // Get substring up to next ^ and send.
+            var lines = event.target.value.split('^');
+            sendContents(lines.shift());
+            event.target.value = lines.join('^');
             event.preventDefault();
         }
     });
