@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var app     = express();
 var path    = require("path");
+var PORT = process.env.PORT || 3000;
 
 const BACKTRACK_LIMIT = 10;
 var index = 1;
@@ -72,5 +73,4 @@ app.delete('/api/clearAll', function(req, res) {
     res.sendStatus(200);
 });
 
-app.listen(3000);
-console.log('Running at port 3000');
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
