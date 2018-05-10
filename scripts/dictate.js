@@ -1,5 +1,4 @@
 (function() {
-    const LINE_LENGTH = 20;
     const dictationArea = document.getElementById('script');
     
     // util
