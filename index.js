@@ -54,7 +54,6 @@ app.get('/api/linePoll/:latest', function(req,res) {
     res.send(result);
 });
 app.post('/api/sendChunk', function(req, res) {
-    // TODO: require password to be sent with each chuck
     if (!req.body) {
         res.sendStatus(400);
         return;
@@ -65,11 +64,13 @@ app.post('/api/sendChunk', function(req, res) {
     if (req.body.newline) {
         numberedChunks[index++] = { newline: true }
     }
+    if (index > 20) {
+        delete numberedChunks[index-20];
+    }
     res.sendStatus(200);
 });
 app.delete('/api/clearAll', function(req, res) {
     numberedChunks = {};
-    index = 1;
     res.sendStatus(200);
 });
 

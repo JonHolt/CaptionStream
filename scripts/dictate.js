@@ -1,4 +1,13 @@
 (function() {
+    var code = prompt('Are you sure you have the right page?');
+    // Change this to whatever you want your dictation "password" to be.
+    // IMPORTANT: This is not AT ALL secure. At best this stops someone
+    // from accidentally messing up your captions. Do not use passwords
+    // here that you've used elsewhere, they can be easily read by anyone.
+    if (code !== 'testCode') {
+        window.location = '/';
+    }    
+
     const dictationArea = document.getElementById('script');
     
     // util
